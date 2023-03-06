@@ -3,7 +3,7 @@ install:
 
 build:
 	docker build -t reashal .
-	docker run -it -p 5000:5000 --name reashal  reashal 
+	docker run -it -p 5000:5000 -v /etc/localtime:/etc/localtime:ro --name reashal  reashal 
 
 run:
 	echo "Press Ctrl-C to stop"
